@@ -25,4 +25,4 @@ jobs:
     - run: npm i
     - run: pm2 restart AuthAPI
       env:
-          PORT:${{secrets.PORT}}
+          PORT : ${{ secrets.PORT }}

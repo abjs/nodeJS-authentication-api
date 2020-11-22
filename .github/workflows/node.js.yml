@@ -25,15 +25,4 @@ jobs:
     - run: npm i
       run: pm2 restart AuthAPI
       env:
-          DB_USER='abjs'
-          DB_PASS='L2euLy97r9lsx1LH'
-          NODE_ENV = 'development
-          DB_NAME=hcbe
-          PORT=5004
-          MONGODB_URL=mongodb+srv://abjs:tgVNyQ16znke0QrD@hcbe.qke3x.mongodb.net
-          MONGODB_URL1=mongodb://localhost:27017
-          MONGODB_DBNAME=Hackclub
-          ACCESS_TOKEN_SECRET=3b2609f36eed0d4e7975c763aafed564e0fa9e834830b9b30d304745af4>
-          REFRESH_TOKEN_SECRET=f90e3aee5e815b28543e0f8e08934fa041ad0e62c73734e018e44bfc73>
-
-
+          PORT:${{secrets.PORT}}

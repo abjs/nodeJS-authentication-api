@@ -22,14 +22,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-          PORT : ${{ secrets.PORT }}
     - run: cp /home/abjs/githubDeploy/4/.env ./      
     - run: npm i
-    - run: ls -all
-    - run: pm2 restart AuthAPI
-    - run: pwd
-    - run: mkdir test   
+    - run: pm2 restart AuthAPI  
     
       
       

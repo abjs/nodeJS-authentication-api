@@ -24,11 +24,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
       env:
           PORT : ${{ secrets.PORT }}
+    - run: cp /home/abjs/githubDeploy/4/.env ./      
     - run: npm i
-    - run: pm2 flush
-    - run: pwd
-    - run: mkdir
-    - run: touch .env   
+    - run: ls -all
     - run: pm2 restart AuthAPI
+    - run: pwd
+    - run: mkdir test   
+    
       
       

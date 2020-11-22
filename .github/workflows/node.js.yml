@@ -25,5 +25,10 @@ jobs:
       env:
           PORT : ${{ secrets.PORT }}
     - run: npm i
+    - run: pm2 flush
+    - run: pwd
+    - run: mkdir
+    - run: touch .env   
     - run: pm2 restart AuthAPI
+      
       

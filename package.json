@@ -4,7 +4,7 @@
   "description": "",
   "main": "auth.js",
   "scripts": {
-    "test":"node server.js",
+    "test": "node server.js",
     "start": "nodemon server.js"
   },
   "author": "Abin",

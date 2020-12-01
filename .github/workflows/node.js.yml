@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cp /home/abjs/githubDeploy/4/.env ./      
+    - run: cp /home/abjs/githubDeploy/Auth/.env ./      
     - run: npm i
     - run: pm2 restart AuthAPI  
     

@@ -19,11 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cp /home/abjs/githubDeploy/Auth/.env ./
-    - run: pm2 flush      
-    - run: npm i
-    - run: pm2 restart AuthAPI
-    - run: pm2 save  
-    
-      
-      
+    - name: Environment
+      run : cp /home/abjs/githubDeploy/Auth/.env ./     
+    - name: Node Install     
+      run : npm i
+    - name: PM2 Resatart
+      run : pm2 restart AuthAPI
+

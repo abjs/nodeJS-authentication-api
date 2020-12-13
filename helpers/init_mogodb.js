@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tlroa.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const uri = process.env.MONGODB_URL;
+console.log(uri);
 // const client = new MongoClient(uri, { useNewUrlParser: true });
 // client.connect(err => {
 //   const collection = client.db("test").collection("devices");
@@ -9,7 +10,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 const mongoose = require('mongoose');
 mongoose
 .connect(uri,{
-    dbName: process.env.MONGODB_DBNAME,
+    dbName: process.env.DBNAME,
     useNewUrlParser: true ,
     useUnifiedTopology: true ,
     useFindAndModify : true ,
